@@ -1,3 +1,127 @@
-* {
-  color: lime;
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  background-color: #333;
+  color: white;
+}
+
+h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+h2 {
+  margin-top: 50px;
+  text-decoration: underline;
+}
+
+#bienvenue {
+  margin-top: 50px;
+}
+#imgAccueil {
+  margin: 50px;
+}
+
+p,
+li {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  border: 2px solid #333;
+  border-radius: 10%;
+  background-color: #eee;
+  padding: 1rem;
+}
+
+nav a:hover {
+  color: #060606;
+}
+
+.accueil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  margin: 20px auto;
+}
+
+#jeu {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 15px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 130px;
+  padding: 1%;
+  width: auto;
+}
+.carte {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  perspective: 1000px;
+} /*
+
+
+/*.carte.retournee {
+  transform: rotate(360deg);
+  transition: transform 1s;
+}*/
+
+.carteInterieur{
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+.carte.retournee .carteInterieur {
+  transform: rotateY(180deg);
+}
+
+.faceArriere{
+  transform: rotateY(180deg);
+}
+
+.faceAvant,
+.faceArriere {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;}
+
+.carte img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 2px solid #f8f7f7;
+  background-color: white;
+}
+
+#bravo,
+#message {
+  display: block;
+  color: green;
+  font-weight: bold;
+  font-size: 2rem;
 }

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeu Memory Game</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ENI - MEMORY - Accueil</h1>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="inscription.html">S'inscrire</a>
+        <a href="connexion.html">Se connecter</a>
+        <a href="profil.html">Profil</a>
+        <a href="jeu.html">Jouer</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>A vous de jouer!</h2>
+      <div id="bravo">
+        Clique sur les éléments pour les retourner afin de trouver les pairs!
+      </div>
+      <div id="message"></div>
+      <div id="jeu">
+        <div class="carte" data-image="asset/1.webp">
+          <div class="carteInterieur">
+            <div class="faceAvant">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+            <div class="faceArriere">
+              <img src="asset/1.webp" alt="face decouverte" />
+            </div>
+          </div>
+        </div>
+        <div class="carte" data-image="asset/1.webp">
+          <div class="carteInterieur">
+            <div class="faceAvant">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+            <div class="faceArriere">
+              <img src="asset/1.webp" alt="face decouverte" />
+            </div>
+          </div>
+        </div>
+        <div class="carte" data-image="asset/2.webp">
+          <div class="carteInterieur">
+            <div class="faceAvant">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+            <div class="faceArriere">
+              <img src="asset/2.webp" alt="face decouverte" />
+            </div>
+          </div>
+        </div>
+        <div class="carte" data-image="asset/2.webp">
+          <div class="carteInterieur">
+            <div class="faceAvant">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+            <div class="faceArriere">
+              <img src="asset/2.webp" alt="face decouverte" />
+            </div>
+          </div>
+        </div>
+       <!--  <div class="carte" data-image="asset/3.webp">
+          <div class="carteInterieur">
+            <div class="faceAvant">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+            <div class="faceArriere">
+              <img src="asset/3.webp" alt="face decouverte" />
+            </div>
+          </div>
+        </div>
+        <div class="carte" data-image="asset/3.webp">
+          <div class="carteInterieur">
+            <div class="faceAvant">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+            <div class="faceArriere">
+              <img src="asset/3.webp" alt="face decouverte" />
+            </div>
+          </div>
+        </div>
+        <div class="carte" data-image="asset/4.webp">
+          <div class="carteInterieur">
+            <div class="faceAvant">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+            <div class="faceArriere">
+              <img src="asset/4.webp" alt="face decouverte" />
+            </div>
+          </div>
+        </div>
+        <div class="carte" data-image="asset/4.webp">
+          <div class="carteInterieur">
+            <div class="faceAvant">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+            <div class="faceArriere">
+              <img src="asset/4.webp" alt="face decouverte" />
+            </div>
+          </div>
+        </div>
+       <div class="carte" data-image="asset/5.webp">
+          <div class="carteInterieur">
+            <div class="faceAvant">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+            <div class="faceArriere">
+              <img src="asset/5.webp" alt="face decouverte" />
+            </div>
+          </div>
+        </div>
+        <div class="carte" data-image="asset/5.webp">
+          <div class="carteInterieur">
+            <div class="faceAvant">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+            <div class="faceArriere">
+              <img src="asset/5.webp" alt="face decouverte" />
+            </div>
+          </div>
+        </div>
+        <div class="carte" data-image="asset/6.webp">
+          <div class="carteInterieur">
+            <div class="faceAvant">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+            <div class="faceArriere">
+              <img src="asset/6.webp" alt="face decouverte" />
+            </div>
+          </div>
+        </div>
+        <div class="carte" data-image="asset/6.webp">
+          <div class="carteInterieur">
+            <div class="faceAvant">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+            <div class="faceArriere">
+              <img src="asset/6.webp" alt="face decouverte" />
+            </div>
+          </div>
+        </div>
+        <div class="carte" data-image="asset/7.webp">
+          <div class="carteInterieur">
+            <div class="faceAvant">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+            <div class="faceArriere">
+              <img src="asset/7.webp" alt="face decouverte" />
+            </div>
+          </div>
+        </div>
+        <div class="carte" data-image="asset/7.webp">
+          <div class="carteInterieur">
+            <div class="faceAvant">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+            <div class="faceArriere">
+              <img src="asset/7.webp" alt="face decouverte" />
+            </div>
+          </div>
+        </div>
+        <div class="carte" data-image="asset/8.webp">
+          <div class="carteInterieur">
+            <div class="faceAvant">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+            <div class="faceArriere">
+              <img src="asset/8.webp" alt="face decouverte" />
+            </div>
+          </div>
+        </div>
+        <div class="carte" data-image="asset/8.webp">
+          <div class="carteInterieur">
+            <div class="faceAvant">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+            <div class="faceArriere">
+              <img src="asset/8.webp" alt="face decouverte" />
+            </div>
+          </div>
+        </div>
+        <!-- <div class="carte">
+          <div class="dos carte" data-image="asset/1.webp">
+            <div class="dosCarte">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+          </div>
+        </div>
+        <div class="carte">
+          <div class="faceVisible" data-image="asset/2.webp">
+            <div class="dosCarte">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+          </div>
+        </div>
+        <div class="carte">
+          <div class="faceVisible" data-image="asset/2.webp">
+            <div class="dosCarte">
+              <img src="asset/question.svg" alt="dos carte" />
+            </div>
+          </div>
+        </div>
+        <div class="carte" data-image="asset/2.webp">
+          <img src="asset/question.svg" alt="dos carte" />
+        </div>
+        <div class="carte" data-image="asset/3.webp">
+          <img src="asset/question.svg" alt="dos carte" />
+        </div>
+        <div class="carte" data-image="asset/3.webp">
+          <img src="asset/question.svg" alt="dos carte" />
+        </div>
+        <div class="carte" data-image="asset/4.webp">
+          <img src="asset/question.svg" alt="dos carte" />
+        </div>
+        <div class="carte" data-image="asset/4.webp">
+          <img src="asset/question.svg" alt="dos carte" />
+        </div>
+        <div class="carte" data-image="asset/5.webp">
+          <img src="asset/question.svg" alt="dos carte" />
+        </div>
+        <div class="carte" data-image="asset/5.webp">
+          <img src="asset/question.svg" alt="dos carte" />
+        </div>
+        <div class="carte" data-image="asset/6.webp">
+          <img src="asset/question.svg" alt="dos carte" />
+        </div>
+        <div class="carte" data-image="asset/6.webp">
+          <img src="asset/question.svg" alt="dos carte" />
+        </div>
+        <div class="carte" data-image="asset/7.webp">
+          <img src="asset/question.svg" alt="dos carte" />
+        </div>
+        <div class="carte" data-image="asset/7.webp">
+          <img src="asset/question.svg" alt="dos carte" />
+        </div>
+        <div class="carte" data-image="asset/8.webp">
+          <img src="asset/question.svg" alt="dos carte" />
+        </div>
+        <div class="carte" data-image="asset/8.webp">
+          <img src="asset/question.svg" alt="dos carte" />
+        </div>-->
+      </div>
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

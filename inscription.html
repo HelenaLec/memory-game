@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription Memory Game</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ENI - MEMORY - S'inscrire</h1>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="inscription.html">S'inscrire</a>
+        <a href="connexion.html">Se connecter</a>
+        <a href="profil.html">Profil</a>
+        <a href="jeu.html">Jouer</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Inscrivez-vous</h2>
+      <form id="formInscription">
+        <label for="nom">Nom d'utilisateur</label>
+        <input
+          type="text"
+          id="nom"
+          required
+          placeholder="3 caractères minimum"
+          minlength="3"
+        />
+        <label for="mail">Entrez votre email</label>
+        <input type="text" id="mail" required placeholder="Votre email" />
+        <label for="mdp">Mot de passe</label>
+        <input
+          type="password"
+          id="mdp"
+          required
+          placeholder="Votre mot de passe"
+        />
+        <p>Au moins un symbole un chiffre, ainsi que 6 caractères minimum.</p>
+        <!--  pattern="^(?=.*[0-9])(?=.*[\W_]).{6,}$" voir si je peux faire en Javascript -->
+        <label for="confirmerMdp">Confirmer le mot de passe</label>
+        <input
+          type="text"
+          id="confirmerMdp"
+          required
+          placeholder="Confirmez le mot-de passe"
+        />
+        <button type="submit">Création du compte</button>
+        <button type="reset">Annuler</button>
+      </form>
+    </main>
+  </body>
+</html>
