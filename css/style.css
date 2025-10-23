@@ -19,14 +19,13 @@ h2 {
 
 .menu {
   padding: 20px;
-  color: #1b1f3b;
   font-weight: bold;
   border: thin solid #1b1f3b;
   border-radius: 5px;
   background-color: #ffb703;
 }
 
-#h2Accueil{
+#h2Accueil {
   text-align: left;
 }
 
@@ -36,22 +35,11 @@ h2 {
   width: 500px;
   max-width: 100%;
   border-radius: 10px;
-
 }
 
 p,
 li {
   font-size: 1.5rem;
-}
-
-nav ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-
 }
 
 nav a {
@@ -66,7 +54,6 @@ nav a:hover {
   color: white;
 }
 
-
 #jeu {
   display: grid;
   grid-template-columns: repeat(4, 200px);
@@ -75,7 +62,6 @@ nav a:hover {
   margin: auto;
   margin-top: 50px;
   padding: 1%;
-  width: auto;
 }
 
 .carte {
@@ -84,8 +70,6 @@ nav a:hover {
   cursor: pointer;
   perspective: 1000px;
 }
-
-
 
 .carteInterieur {
   width: 100%;
@@ -109,7 +93,6 @@ nav a:hover {
   height: 100%;
   backface-visibility: hidden;
   border-radius: 10px;
-
 }
 
 .carte img {
@@ -118,51 +101,36 @@ nav a:hover {
   border-radius: 10px;
   border: 2px solid #f8f7f7;
   background-color: #f8f7f7;
-
 }
 
 #zoneTexte,
 #message {
-  display: block;
-  color: #ffb703;
   font-weight: bold;
   font-size: 2rem;
-  text-align: center;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 10px 20px;
 }
-
-
 
 /* Message "Bravo" avec animation */
 #zoneTexte {
-  color: #ffb703; 
-  font-weight: bold;
+  color: #ffb703;
   background-color: #e8f5e9;
-  border: 2px solid  #ffb703;
-  border-radius: 10px;
-  padding: 10px 20px;
-  display: inline-block;
-
+  border: 2px solid #ffb703;
 }
 
 /* Message "Bravo" visible */
-#message.show{
+#message.show {
   opacity: 1;
- 
 }
 
 /* Message "appuyez sur espace" */
 #message {
-  color:  #1b1f3b; 
+  color: #1b1f3b;
   background-color: #e3f2fd;
   border: 1px solid #1b1f3b;
-  border-radius: 10px;
-  padding: 8px 15px;
-  display: inline-block;
   opacity: 0;
-
 }
-
-
 
 /* Formulaire */
 .formContainer {
@@ -174,7 +142,6 @@ nav a:hover {
   margin: 50px auto;
   color: #1b1f3b;
   height: auto;
-
 }
 
 .formContainer label {
@@ -190,11 +157,9 @@ nav a:hover {
   margin-bottom: 20px;
   border-radius: 5px;
   border: 1px solid #8ecae6;
-    background-color: #1b1f3b;
+  background-color: #1b1f3b;
   color: #f1f1f1;
 }
-
-
 
 .formButtons {
   display: flex;
@@ -227,19 +192,18 @@ nav a:hover {
 
 .formButtons button[type="reset"]:hover {
   background-color: #d7372f;
-  color: (150, 147, 147);
+  color: rgb(150, 147, 147);
 }
 
 input {
-  background-color:#1b1f3b;
+  background-color: #1b1f3b;
   color: white;
 }
 
 #indication {
-  color:#ffb703;
+  color: #ffb703;
   font-size: 1em;
   font-style: italic;
-
 }
 
 .imgProfil {
@@ -249,12 +213,13 @@ input {
   height: 200px;
 }
 
-.valueNom, .valueMail{
+.valueNom,
+.valueMail {
   padding: 30px;
 }
 
-.label{
-  border-bottom: 2px solid #1b1f3b ;
+.label {
+  border-bottom: 2px solid #1b1f3b;
   padding: 10px;
   margin-bottom: 10px;
 }
