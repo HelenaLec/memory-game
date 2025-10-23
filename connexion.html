@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connexion Memory Game</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <header>
       <h1>ENI - MEMORY - Connecter</h1>
-      <nav>
+      <nav class="menu">
         <a href="index.html">Accueil</a>
         <a href="inscription.html">S'inscrire</a>
         <a href="connexion.html">Se connecter</a>
@@ -19,8 +20,8 @@
     </header>
 
     <main>
-      <h2>Connectez-vous.</h2>
-      <form id="formConnexion">
+      <form class="formContainer">
+        <h2>Connectez-vous</h2>
         <label for="mail">Entrez votre email</label>
         <input
           type="text"
@@ -35,8 +36,10 @@
           required
           placeholder="Votre mot de passe"
         />
-        <button type="submit">Se connecter</button>
-        <button type="reset">Annuler</button>
+        <div class="formButtons">
+          <button type="submit">Se connecter</button>
+          <button type="reset">Annuler</button>
+        </div>
       </form>
     </main>
   </body>

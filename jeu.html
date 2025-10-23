@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeu Memory Game</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>ENI - MEMORY - Accueil</h1>
-      <nav>
-        <a href="index.html">Accueil</a>
-        <a href="inscription.html">S'inscrire</a>
-        <a href="connexion.html">Se connecter</a>
-        <a href="profil.html">Profil</a>
-        <a href="jeu.html">Jouer</a>
-      </nav>
-    </header>
+<html lang="fr">
 
-    <main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeu Memory Game</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>ENI - MEMORY - Accueil</h1>
+    <nav class="menu">
+      <a href="index.html">Accueil</a>
+      <a href="inscription.html">S'inscrire</a>
+      <a href="connexion.html">Se connecter</a>
+      <a href="profil.html">Profil</a>
+      <a href="jeu.html">Jouer</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="formContainer">
       <h2>A vous de jouer!</h2>
-      <div id="bravo">
-        Clique sur les éléments pour les retourner afin de trouver les pairs!
-      </div>
+      <p id="zoneTexte">Clique sur les cartes afin de trouver les paires!</p>
       <div id="message"></div>
       <div id="jeu">
         <div class="carte" data-image="asset/1.webp">
@@ -145,7 +147,7 @@
             </div>
           </div>
         </div>
-        <div class="carte" data-image="asset/7.webp">
+       <!-- <div class="carte" data-image="asset/7.webp">
           <div class="carteInterieur">
             <div class="faceAvant">
               <img src="asset/question.svg" alt="dos carte" />
@@ -185,9 +187,12 @@
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </div>-->
 
-    <script type="module" src="js/app.js"></script>
-  </body>
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+
 </html>

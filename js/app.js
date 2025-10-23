@@ -9,34 +9,39 @@ if (!lancerJeu) {
 
 console.log("la valeur de lancer jeu: ", lancerJeu);
 
-const jeu = document.getElementById("jeu"); // je vais chercher l'élément jeu de mon HTML que je stocke dans une const jeu
-const bravo = document.getElementById("bravo");
+// je vais chercher l'élément jeu de mon HTML que je stocke dans une const jeu.
+const jeu = document.getElementById("jeu");
+// zone de texte qui affichera le message de félicitations et définis zoneTexte.
+const zoneTexte = document.getElementById("bravo");
+// zone de texte qui affichera le message appuyer sur espace pour relancer.
 const message = document.getElementById("message");
 
-const cartes = Array.from(jeu.querySelectorAll(".carte")); //permet de transformer en tableau l'ensemble des elements "carte",
+//permet de transformer en tableau l'ensemble des elements "carte",
+const cartes = Array.from(jeu.querySelectorAll(".carte"));
 // contenu dans ma div "jeu"
 console.log(jeu);
 
-cartes.sort(() => Math.random() - 0.5); // utilisation de Math.random afin de mélanger les cartes
+// utilisation de Math.random afin de mélanger les cartes
+cartes.sort(() => Math.random() - 0.5);
 cartes.forEach((carte) => jeu.appendChild(carte));
 
 let premiere = null;
-let verrou = false; //empêche de cliquer sur d'autres cartes durant le délai de 5 secondes
+//empêche de cliquer sur d'autres cartes durant le délai de 5 secondes
+let verrou = false;
 
 cartes.forEach((carte) => {
   carte.addEventListener("click", () => {
     if (verrou || carte.classList.contains("retournee")) return;
 
     // pour retourner la carte
-    //const img = carte.querySelector("img");
-    //img.src = carte.dataset.image;
     carte.classList.add("retournee");
 
     if (!premiere) {
-      premiere = carte; // 1ère carte
+      premiere = carte;
     } else {
-      const deuxieme = carte; // 2e carte
-      verrou = true; //bloque les clics
+      const deuxieme = carte;
+      //bloque les clics
+      verrou = true;
 
       // On vérifie si les images sont identiques
       if (premiere.dataset.image === deuxieme.dataset.image) {
@@ -44,22 +49,25 @@ cartes.forEach((carte) => {
         premiere = null;
         verrou = false;
 
-        // On vérifie si toutes les cartes sont trouvées
+        /*On vérifie si toutes les cartes sont trouvées
+        .every parcourt chaque carte une par une,
+        verifie si elle a la classe retournee, si oui la condition if est vrai*/
         if (cartes.every((c) => c.classList.contains("retournee"))) {
-          //.every parcourt chaque carte une par une,
-          // verifie si elle a la classe retournee, si oui la condition if est vrai
-
           console.log(bravo);
-          bravo.textContent = "Bravo ! Vous avez trouvé toutes les paires !"; //J'ajoute du texte à ma div bravo quand le joueur à gagné
+          //J'ajoute du texte à ma div bravo quand le joueur à gagné
+          zoneTexte.textContent =
+            "Bravo ! Vous avez trouvé toutes les paires !";
+          /*J'ajoute du texte à ma div message,
+          j'invite le joueur à une nouvelle partie en cliquant sur espace*/
           message.textContent =
-            "Appuyez sur la touche espace pour relancer une partie"; // J'ajoute du texte à ma div message,
-          // j'invite le joueur à une nouvelle partie en cloiquant sur espace
+            "Appuyez sur la touche espace pour relancer une partie";
+
+          zoneTexte.classList.add("show");
+          message.classList.add("show");
         }
       } else {
-        //Pas de paire trouvée: on les retourne après 5s
+        //Pas de paire trouvée on les retourne après 5s
         setTimeout(() => {
-          premiere.querySelector("img").src = "asset/question.svg";
-          deuxieme.querySelector("img").src = "asset/question.svg";
           premiere.classList.remove("retournee");
           deuxieme.classList.remove("retournee");
           premiere = null;
@@ -77,9 +85,13 @@ document.addEventListener("keydown", (event) => {
 });
 
 function rejouer() {
-  message.textContent = ""; //cela efface les deux messages
-  bravo.textContent = "";
+  //cela efface message
+  message.textContent = "";
+  // cela remet ma phrase initiale
+  zoneTexte.textContent = "Clique sur les cartes afin de trouver les paires!";
 
+  message.classList.remove("show");
+  zoneTexte.classList.remove("show");
   // On remet toutes les cartes face cachée
   cartes.forEach((carte) => {
     const img = carte.querySelector("img");

@@ -9,7 +9,7 @@
   <body>
     <header>
       <h1>ENI - MEMORY - S'inscrire</h1>
-      <nav>
+      <nav class="menu">
         <a href="index.html">Accueil</a>
         <a href="inscription.html">S'inscrire</a>
         <a href="connexion.html">Se connecter</a>
@@ -19,8 +19,10 @@
     </header>
 
     <main>
-      <h2>Inscrivez-vous</h2>
-      <form id="formInscription">
+      
+      <form class = "formContainer">
+        
+        <h2>Inscrivez-vous</h2>
         <label for="nom">Nom d'utilisateur</label>
         <input
           type="text"
@@ -38,17 +40,19 @@
           required
           placeholder="Votre mot de passe"
         />
-        <p>Au moins un symbole un chiffre, ainsi que 6 caractères minimum.</p>
+        <p id="indication"><strong>Au moins un symbole un chiffre, ainsi que 6 caractères minimum.</strong></p>
         <!--  pattern="^(?=.*[0-9])(?=.*[\W_]).{6,}$" voir si je peux faire en Javascript -->
         <label for="confirmerMdp">Confirmer le mot de passe</label>
         <input
-          type="text"
+          type="password"
           id="confirmerMdp"
           required
           placeholder="Confirmez le mot-de passe"
         />
+        <div class = "formButtons">
         <button type="submit">Création du compte</button>
         <button type="reset">Annuler</button>
+      </div>
       </form>
     </main>
   </body>
